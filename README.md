@@ -1,7 +1,7 @@
 # Group-Profit-Project
-the first letter of the file indicates who has done that part
-A = All, 
-E = Ethan, 
-Z = Zhixian, 
-X = Xuan Le, 
-I = Isaac, 
+the first letter of the file indicates who has done that part<br>
+A = All, <br>
+E = Ethan, <br>
+Z = Zhixian, <br>
+X = Xuan Le, <br>
+I = Isaac,
