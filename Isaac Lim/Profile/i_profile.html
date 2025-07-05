@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Isaac's Profile</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    body {
+      border: 20px solid #985321;
+      box-shadow:
+        inset 8px 8px 12px #803800,
+        inset -8px -8px 12px #d8a36c,
+        0 0 30px rgba(0,0,0,0.5);
+      background-color: black;
+      height: 100vh;
+      padding: 15px;
+    }
+
+    .content {
+      height: 100%;
+      width: 100%;
+      background-color: #d9cab3;
+      color: black;
+      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+      overflow: auto;
+      position: relative;
+    }
+
+    .text-head {
+      position: absolute;
+      top: 80px;
+      left: 1200px;
+      width: 700px;
+      height: auto;
+      background-color: #d9cab3;
+      border-radius: 8px;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    .text-box {
+      position: absolute;
+      width: 700px;
+      height: auto;
+      padding: 20px;
+      background-color: #ffebc7;
+      border-radius: 8px;
+      color: #3e2349;
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      z-index: 1000;
+    }
+
+    .box1 { top: 220px; left: 1100px; }
+    .box2 { top: 500px; left: 1280px; }
+    .box3 { top: 800px; left: 1450px; }
+
+    .slideshow-container {
+      position: absolute;
+      top: 1350px;
+      left: 935px;
+      width: 600px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 10px;
+      z-index: 500;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .interest-section {
+      position: absolute;
+      top: 1800px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 100px;
+      box-sizing: border-box;
+    }
+
+    .interest-box {
+      width: 40%;
+      min-height: 150px;
+      padding: 20px;
+      background-color: #ffe6b3;
+      border-radius: 10px;
+      font-size: 18px;
+      resize: vertical;
+      overflow: auto;
+    }
+  </style>
+  <style>
+.image-gallery {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 50px 100px;
+  background-color: #f8e7ce;
+  border-radius: 20px;
+  margin-top: 80px;
+}
+
+.image-box {
+  width: 300px;
+  height: 200px;
+  background-color: #fff4da;
+  border: 4px solid #b37644;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
+</head>
+<body>
+  <div class="content">
+    <!-- Original image 1 -->
+    <img src="I_Slideshow1.jpg"
+         style="position: relative; top: 300px; left: 300px; width: 600px; height: auto; border-radius: 15px;" />
+    <!-- Who am I heading (blue) -->
+    <div class="text-head">
+      <h1 style="font-size: 60px;"><strong>Who am I?</strong></h1>
+    </div>
+
+    <!-- Red boxes below heading (staggered layout) -->
+    <div class="text-box box1">
+      <p>Hi I'm Isaac, your Average PFP student. I am taking the cybersecurity and digital forensics course and am part of the (JCG) Japanese Cultural Club.</p>
+    </div>
+
+    <div class="text-box box2">
+      <p>I really hope this path through PFP was not a mistake and will keep me going toward my future (if I'm sane by then). I like manga, games, and drawing.</p>
+    </div>
+
+    <div class="text-box box3">
+      <p>I'm quite compulsive — I check things repeatedly. But I’ve learned to embrace it. I'm shy and prefer the background, but I work diligently.</p>
+    </div>
+
+    <div style="height: 1000px;"></div>
+
+    <!-- 📸 Slideshow positioned next to 'My interests' -->
+    <div class="slideshow-container">
+      <img class="slide active" src="I_Slideshow2.jpg" />
+      <img class="slide" src="I_Slideshow3.jpg" />
+      <img class="slide" src="Slideshow4.jpg" />
+      <img class="slide" src="Slideshow5.jpg" />
+      <img class="slide" src="Slideshow6.jpg" />
+
+    </div>
+
+    <!-- My Interests Headings -->
+    <div class="text-head" style="top: 1630px; left: 230px;">
+      <div style="display: flex; justify-content: center;">
+        <h1 style="font-size: 60px;"><strong>My interests</strong></h1>
+      </div>
+    </div>
+
+    <div class="text-head" style="top: 1630px; left: 1550px;">
+      <div style="display: flex; justify-content: center;">
+        <h1 style="font-size: 60px;"><strong>My Future</strong></h1>
+      </div>
+    </div>
+
+    <!-- ✅ Text boxes under both "My interests" -->
+    <div class="interest-section">
+      <div class="interest-box" contenteditable="true">
+        I enjoy reading manga, watching shows, drawing and gaming. During my free time I also somethings practice my drawings. I guess you could say I'm quite an introvert and I really want to learn about programming.  For what I read and watch I would say I enjoy romance and action. 
+<br><br>
+(My photos are horrible) :( <br><br>
+Below are images from games, shows and manga that i enjoy.
+      </div>
+      <div class="interest-box" contenteditable="true">
+       I aspire to join MINDEF at year 3 to follow in my father's footsteps in the army. I also believe that it will be a good experience to learn proper coding through experience, and where else would be better than the military. This may not be the best option but that is a time for another day.
+      </div>
+    </div>
+<div style="height: 500px;"></div>
+<div class="image-gallery">
+  <div class="image-box"><img src="image1.jpg" alt="Image 1"></div>
+  <div class="image-box"><img src="image2.jpg" alt="Image 2"></div>
+  <div class="image-box"><img src="image3.jpg" alt="Image 3"></div>
+  <div class="image-box"><img src="image4.jpg" alt="Image 4"></div>
+</div>
+  </div>
+
+  <!-- 📜 Slideshow script -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+          slide.classList.add('active');
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000); // every 5 seconds
+  </script>
+
+</body>
+</html>

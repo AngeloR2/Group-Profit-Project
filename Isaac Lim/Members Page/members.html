@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Member Cards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .content {
+      color: white;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .card-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .member-card {
+      width: 250px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .card-header {
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .profile-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-top: -40px;
+      background-color: white;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-body h3 {
+      margin: 10px 0 5px;
+      color: #333;
+    }
+
+    .card-body p {
+      margin: 4px 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .card-body a {
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 14px;
+      color: #e91e63;
+      text-decoration: none;
+    }
+
+    .force-break {
+      flex-basis: 100%; /* Forces the next item to a new row */
+      height: 0;
+    }
+
+    .centered {
+      margin-left: auto;
+      margin-right: auto;
+    }
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Remove inherited styles from inner elements */
+.card-link * {
+  text-decoration: none;
+  color: inherit;
+}
+  </style>
+</head>
+<body>
+
+
+<div style="position: relative;">
+  <!-- This is the floating white text in the top-left -->
+  <p style="
+    position: absolute;
+    top: 0;
+    left: -60%;
+    color: black;
+    margin: 0;
+    padding: 10px;
+    font-size: 30px;
+    z-index: 10;
+  ">
+    <a href="<strong>Your Text Here</strong>
+  </p>
+
+
+
+  <div class="content">
+    <div class="card-wrapper">
+      <div class="card-container">
+
+        <!-- Member 1 -->
+        <a class="card-link" href="   " target="_blank">
+        <div class="member-card">
+          <div class="card-header" style="background-image: url('ethanprofile.jpg');">    </div>
+          <div class="card-body">
+            <img class="profile-img" src="ethanf.jpg" alt="Ethan">
+            <p>Order Now page</p>
+            <h3>Ethan</h3>
+          </div>
+        </div>
+       </a>
+
+
+        <!-- Member 2 -->
+        <a class="card-link" href="https://example.com" target="_blank">
+        <div class="member-card">
+          <div class="card-header" style="background-image: url('fish.jpg');"></div>
+          <div class="card-body">
+            <img class="profile-img" src="ZhiXuanface.jpg">
+            <p>Menu</p>
+            <h3>Zhi Xian</h3>
+          </div>
+        </div>
+    </a>
+
+        <!-- Member 3 -->
+         <a class="card-link" href="https://example.com" target="_blank">
+  <div class="member-card">
+          <div class="card-header" style="background-image: url('isaacprofile.jpg');"></div>
+          <div class="card-body">
+            <img class="profile-img" src="profilepic.jpg" alt="Isaac">
+            <p>About Us Page creator</p>
+            <h3>Isaac</h3>
+          </div>
+       </div>
+</a>
+
+        <!-- Force new row -->
+        <div class="force-break"></div>
+
+        <!-- Member 4 -->
+        <a class="card-link" href="https://example.com" target="_blank">
+        <div class="member-card centered">
+          <div class="card-header" style="background-image: url('job.jpg');"></div>
+          <div class="card-body">
+            <img class="profile-img" src="Leprofile3.jpg" alt="Xuan Le">
+            <p>Contact Us Page<p>
+            <h3>Xuan Le</h3>
+          </div>
+        </div>
+</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
