@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Isaac's Profile</title>
   <style>
     html, body {
@@ -106,51 +107,117 @@
       resize: vertical;
       overflow: auto;
     }
+
+    .image-gallery {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 50px 100px;
+      background-color: #f8e7ce;
+      border-radius: 20px;
+      margin-top: 80px;
+    }
+
+    .image-box {
+      width: 300px;
+      height: 200px;
+      background-color: #fff4da;
+      border: 4px solid #b37644;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ✅ Responsive for laptops */
+    @media (max-width: 1920px) {
+      .box1 { left: 60%; }
+      .box2 { left: 67%; }
+      .box3 { left: 75%; }
+      .text-head { left: 62%; }
+      .slideshow-container { left: 50%; transform: translateX(-50%); }
+    }
+
+    @media (max-width: 1600px) {
+      .box1 { left: 55%; }
+      .box2 { left: 62%; }
+      .box3 { left: 70%; }
+      .text-head { left: 58%; }
+      .slideshow-container { width: 550px; }
+    }
+
+    @media (max-width: 1440px) {
+      .box1 { left: 48%; }
+      .box2 { left: 55%; }
+      .box3 { left: 62%; }
+      .text-head { left: 50%; transform: translateX(-50%); }
+      .slideshow-container { width: 500px; }
+    }
+
+    @media (max-width: 1280px) {
+      .box1, .box2, .box3, .text-head {
+        width: 90%;
+        left: 5% !important;
+        position: relative;
+        margin-top: 20px;
+      }
+      .slideshow-container {
+        width: 90%;
+        position: relative;
+        left: auto;
+        top: auto;
+        margin: 30px auto;
+      }
+      .interest-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px;
+        top: auto;
+        position: relative;
+      }
+      .interest-box {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .text-box {
+        font-size: 16px;
+      }
+      .text-head h1 {
+        font-size: 40px;
+      }
+      .image-gallery {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+      }
+      .image-box {
+        width: 90%;
+        height: auto;
+      }
+    }
   </style>
-  <style>
-.image-gallery {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 50px 100px;
-  background-color: #f8e7ce;
-  border-radius: 20px;
-  margin-top: 80px;
-}
-
-.image-box {
-  width: 300px;
-  height: 200px;
-  background-color: #fff4da;
-  border: 4px solid #b37644;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-</style>
 </head>
 <body>
   <div class="content">
-    <!-- Original image 1 -->
     <img src="I_Slideshow1.jpg"
          style="position: relative; top: 300px; left: 300px; width: 600px; height: auto; border-radius: 15px;" />
-    <!-- Who am I heading (blue) -->
     <div class="text-head">
       <h1 style="font-size: 60px;"><strong>Who am I?</strong></h1>
     </div>
 
-    <!-- Red boxes below heading (staggered layout) -->
     <div class="text-box box1">
       <p>Hi I'm Isaac, your Average PFP student. I am taking the cybersecurity and digital forensics course and am part of the (JCG) Japanese Cultural Club.</p>
     </div>
@@ -165,17 +232,14 @@
 
     <div style="height: 1000px;"></div>
 
-    <!-- 📸 Slideshow positioned next to 'My interests' -->
     <div class="slideshow-container">
       <img class="slide active" src="I_Slideshow2.jpg" />
       <img class="slide" src="I_Slideshow3.jpg" />
       <img class="slide" src="slideshow4.jpg" />
       <img class="slide" src="slideshow5.jpg" />
       <img class="slide" src="slideshow6.jpg" />
-
     </div>
 
-    <!-- My Interests Headings -->
     <div class="text-head" style="top: 1630px; left: 230px;">
       <div style="display: flex; justify-content: center;">
         <h1 style="font-size: 60px;"><strong>My interests</strong></h1>
@@ -188,28 +252,25 @@
       </div>
     </div>
 
-    <!-- ✅ Text boxes under both "My interests" -->
     <div class="interest-section">
       <div class="interest-box" contenteditable="true">
-        I enjoy reading manga, watching shows, drawing and gaming. During my free time I also somethings practice my drawings. I guess you could say I'm quite an introvert and I really want to learn about programming.  For what I read and watch I would say I enjoy romance and action. 
-<br><br>
-(My photos are horrible) :( <br><br>
-Below are images from games, shows and manga that i enjoy.
+        I enjoy reading manga, watching shows, drawing and gaming...
       </div>
       <div class="interest-box" contenteditable="true">
-       I aspire to join MINDEF at year 3 to follow in my father's footsteps in the army. I also believe that it will be a good experience to learn proper coding through experience, and where else would be better than the military. This may not be the best option but that is a time for another day.
+        I aspire to join MINDEF at year 3...
       </div>
     </div>
-<div style="height: 500px;"></div>
-<div class="image-gallery">
-  <div class="image-box"><img src="image1.jpg" alt="Image 1"></div>
-  <div class="image-box"><img src="image2.jpg" alt="Image 2"></div>
-  <div class="image-box"><img src="image3.jpg" alt="Image 3"></div>
-  <div class="image-box"><img src="image4.jpg" alt="Image 4"></div>
-</div>
+
+    <div style="height: 500px;"></div>
+    <div class="image-gallery">
+      <div class="image-box"><img src="image1.jpg" alt="Image 1"></div>
+      <div class="image-box"><img src="image2.jpg" alt="Image 2"></div>
+      <div class="image-box"><img src="image3.jpg" alt="Image 3"></div>
+      <div class="image-box"><img src="image4.jpg" alt="Image 4"></div>
+    </div>
   </div>
 
-  <!-- 📜 Slideshow script -->
+  <!-- Slideshow Script -->
   <script>
     const slides = document.querySelectorAll('.slide');
     let currentSlide = 0;
@@ -228,8 +289,7 @@ Below are images from games, shows and manga that i enjoy.
       showSlide(currentSlide);
     }
 
-    setInterval(nextSlide, 3000); // every 5 seconds
+    setInterval(nextSlide, 3000);
   </script>
-
 </body>
 </html>
