@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XL Coffee Menu</title>
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #342519;
+    }
+
+    li {
+      float: right;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 2px 30px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: #342519;
+    }
+
+    hr.line {
+      border: 10px solid #342519;
+    }
+
+    img {
+      border: 10px solid #342519;
+    }
+    
+    .XLmenus {
+      display: block;	
+      width: 1000px;
+      padding: 20px 20px;
+      margin: 10px 10px;
+      font-size: 100px;
+      font-family: impact;
+      text-align: center;
+      color: #342519;
+    }
+
+    .display {
+      float: left;
+      padding: 10px;
+      gap: 100px;
+      font-size: 20px;
+    }
+
+    .slideshow {
+      width: 800px;
+      height: 600px;
+      overflow: hidden;
+      position: relative;
+      margin: auto;
+    }
+
+    .slides {
+      display: flex;
+      width: calc(800px * 6);
+      animation: slide 60s ease-in-out infinite;
+    }
+
+    .slides img {
+      width: 800px;
+      height: 600px;
+      object-fit: contain;
+    }
+
+    @keyframes slide {
+  0% { transform: translateX(0); }
+  16.66% { transform: translateX(0); }
+
+  20% { transform: translateX(-800px); }
+  33.32% { transform: translateX(-800px); }
+
+  36.66% { transform: translateX(-1600px); }
+  49.98% { transform: translateX(-1600px); }
+
+  53.32% { transform: translateX(-2400px); }
+  66.64% { transform: translateX(-2400px); }
+
+  69.98% { transform: translateX(-3200px); }
+  83.3% { transform: translateX(-3200px); }
+
+  86.64% { transform: translateX(-4000px); }
+  100% { transform: translateX(-4000px); }
+}
+
+    .Menuhead {
+      font-size: 50px;
+      text-align: center;
+    }
+
+    .bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://static.wikia.nocookie.net/houkai-star-rail/images/5/5b/NPC_Little_Ica.png/revision/latest/thumbnail/width/360/height/360?cb=20250521103538');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.0015;
+      z-index: -1;
+    }
+
+    .Infomatics {
+      width: 200px;
+      height:50px;
+      text-align: center;
+      font-size: 35px;
+      padding: 30px 50px;
+      margin: 50px 50px;
+      border: none;
+      border-radius: 20px;
+      color: #EDE6D9;
+      background-color: #342519;
+}
+
+
+    .menu {
+      background-color: #684F36;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .menu button {
+      background-color: #342519;
+      color: #EDE6D9;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .menu button:hover {
+      background-color: #e6dfd3;
+      color: #342519;
+    }
+
+    .displaymenu {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1600px;
+  margin: 20px auto;
+  background-color: #EDE6D9;
+  border-radius: 15px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  text-align: center;
+}
+
+.menu-item img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.menu-item h3 {
+  margin: 15px  5px ;
+  color: #342519;
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+.menu-item p {
+  font-size: 15px;
+  color: #342519;
+  font-size: 20px;
+}
+
+    #content {
+      padding: 20px;	
+    }
+
+    footer {
+      background-color: #342519;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer hr {
+      width: 85%;
+      size: 3.5;
+      color: white;
+    }
+  </style>
+</head>
+<body style="background-color:#B39977;">
+
+  <div class="bg"></div>
+
+<ul>
+<a href="XLcoffee.html"><img src="logo2.png" alt="logo" style="width:80px;height:80px;"></a>  <li><p style="font-size:20px;"><a class="active" href="#home"><b>Menu</b></a></li>
+  <li><p style="font-size:20px;"><a href="#Order Now"><b>Order Now</b></a></li>
+  <li><p style="font-size:20px;"><a href="#contact"><b>Contact</b></a></li>
+  <li><p style="font-size:20px;"><a href="#about"><b>About</b></b></a></li>
+</ul>
+<div class="XLmenus"
+ <h1> XL menu</h2>
+</div>
+
+<hr style="border: 10px solid #342519;">
+
+  <div class="slideshow">
+    <div class="slides">
+      <img src="logobackground.png" alt="Slide 1" />
+      <img src="FFscones.jpg" alt="Slide 2" />
+      <img src="FFSG60XL3.jpg" alt="Slide 3" />
+      <img src="FFdisplays.jpg" alt="Slide 4" />
+      <img src="FFdisplay2.jpg" alt="Slide 5" />
+      <img src="logobackground.png" alt="Slide 1 duplicate" />
+    </div>
+  </div>
+
+  <hr class="line" />
+
+  <center>
+    <h2 style="font-size: 30px;">Limited Store Only!</h2>
+<br>
+<br>
+    <img src="FFmochaad1.jpg" style="width: 500px;height: 500px;">
+    <img src="FFSG60XL1.jpg" style="width: 500px;height: 500px;">
+    <img src="FFSG60XL2.jpg" style="width: 500px;height: 500px;">
+  </center>
+<br>
+<br>
+<br>
+  <center>
+    <a href="XLevents.html" class="Infomatics">More Info</a>
+  </center>
+<br>
+<br>
+<hr class="line">
+<br>
+<br>
+<br>
+<br>
+  <nav class="menu">
+    <button onclick="showCoffee()">Coffee</button>
+    <button onclick="showPastries()">Pastry</button>
+    <button onclick="showMerch()">Merchandise</button>
+  </nav>
+
+  <div id="content">
+    <p style="text-align: center; font-size: 50px; font-family:impact;">Select category to view items.</p>
+  </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+    <a href="ordernow.html" class="Infomatics">Order here</a>
+</center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <footer>
+    <h1>Location</h1>
+    <p style="font-size:70%">Temasek Polytechnic 21 Tampines Ave 1 Singapore 529757</p>
+    <hr>
+    <h1>Opening Timings</h1>
+    <p>Monday–Friday: 7:00am–7:00pm</p>
+    <p>Saturday–Sunday: 9:30am–5:30pm</p>
+  </footer>
+
+<script>
+    function showCoffee() {
+      document.getElementById("content").innerHTML = `
+        <h2 style="text-align: center; font-size: 50px; text-decoration: underline;">Coffee</h2>
+        <div class="displaymenu">
+
+      <div class="menu-item">
+        <img src="coffee1.0.png" alt="Coffee Item">
+        <h3>XL's Espresso</h3>
+        <p>Our base coffee made from the finest coffee beans.</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="FFLargecoffee.jpg" alt="Coffee Item">
+        <h3>Signature: XL's Coffee</h3>
+        <p>Our Signature Extra Large Coffee, a litre filled cup of our classic espresso<p>
+      </div>
+
+      <div class="menu-item">
+        <img src="FFlatte.jpg" alt="Coffee Item">
+        <h3>Latte</h3>
+        <p>two shots of espresso, steamed milk and a taste of milk froth, Milk is lactose free as well!</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="FFcappucino.jpg" alt="Coffee Item">
+        <h3>Cappucino</h3>
+        <p>espresso shot and frothed up Milk, for a stronger taste but the creaminess from the froth</p>
+      </div>
+      <div class="menu-item">
+        <img src="FFmocha.jpg" alt="Coffee Item">
+        <h3>Mocha</h3>
+        <p>Coffee for our choco-lovers! sweet espresso and milk with delicious chocolate milk</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="FFamericano.jpg" alt="Coffee Item">
+        <h3>Americano</h3>
+        <p>Espresso with hot steaming water,a lighter taste of espresso to supress too much coffee strength.</p>
+      </div>
+      <div class="menu-item">
+        <img src="FFMatcha.jpg" alt="Coffee Item">
+        <h3>Matcha latte</h3>
+        <p>Latte mixed with ground-up tea leaves, perfect for those who love the best of both tea and coffee</p>
+      </div>
+
+    </div>
+      `;
+    }
+
+    function showPastries() {
+      document.getElementById("content").innerHTML = `
+        <h2 style="text-align: center; font-size: 50px; text-decoration: underline;">Pastries</h2>
+<div class="displaymenu">
+
+      <div class="menu-item">
+        <img src="FFlimepie.jpg" alt="Pastry">
+        <h3>Key-lime pie</h3>
+        <p></p>
+      </div>
+
+      <div class="menu-item">
+        <img src="FFteabiscuit.jpg" alt="Pastry">
+        <h3>Rich Tea-Biscuits</h3>
+        <p>tea biscuits that can also be used for coffee</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="FFcroissant.jpg" alt="Pastry">
+        <h3>Croissant</h3>
+        <p>A french pastry shaped like a crescent</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="FFcookie.jpg" alt="Pastry">
+        <h3>Cookies</h3>
+        <p>cookie yummy</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="FFscones.jpg" alt="Pastry">
+        <h3>Scones</h3>
+        <p>A delicious British pastry perfect for tea-time!</p>
+      </div>
+
+    </div>
+
+        
+      `;
+    }
+
+    function showMerch() {
+      document.getElementById("content").innerHTML = `
+        <h2 style="text-align: center; font-size: 50px; text-decoration: underline;">Merchandise</h2>
+        <div class="displaymenu">
+
+      <div class="menu-item">
+        <img src="GPXLtotebag.png" alt="totebag">
+        <h3>Tote Bag</h3>
+      </div>
+
+      <div class="menu-item">
+        <img src="GPshirt.png" alt="shirt">
+        <h3>Shirt</h3>
+	<br>
+	<br>
+        <p>(All Merchandise are sold on the physical store only)</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="GPkeychain.png" alt="acrylickeychain">
+        <h3>Acrylic keychain</h3>
+      </div>
+    </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
