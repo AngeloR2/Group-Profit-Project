@@ -13,7 +13,7 @@
       overflow-x: hidden;
     }
 
-    /* Outer container with border + background */
+    
     .outer {
       background-color: #d9cab3;
       border: 20px solid #985321;
@@ -27,7 +27,7 @@
       box-sizing: content-box;
     }
 
-    /* Main wrapper that will scale */
+   
     .scale-container {
       width: 2560px;
       height: auto;
@@ -38,10 +38,10 @@
     .content {
       width: 100%;
       position: relative;
-      min-height: 2500px; /* enough height for all your content */
+      min-height: 2500px; 
     }
 
-    /* Text header */
+  
     .text-head {
       position: absolute;
       width: 700px;
@@ -221,15 +221,15 @@
     </div>
   </div>
 
-  <!-- 🧠 JS: scale layout to fit any screen -->
+ 
   <script>
     function scaleToFit() {
       const container = document.getElementById('scale-container');
       const screenWidth = window.innerWidth;
-      const scale = Math.min(screenWidth / 2560, 1); // never upscale
+      const scale = Math.min(screenWidth / 2560, 1); 
       container.style.transform = `scale(${scale})`;
 
-      // Ensure outer container matches scaled height
+   
       const outer = document.querySelector('.outer');
       const contentHeight = container.getBoundingClientRect().height;
       outer.style.height = contentHeight + 'px';
@@ -240,7 +240,7 @@
   </script>
 
   <script>
-    // Slideshow logic
+  
     const slides = document.querySelectorAll('.slide');
     let current = 0;
     function nextSlide() {
