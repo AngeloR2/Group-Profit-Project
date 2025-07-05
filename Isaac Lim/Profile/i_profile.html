@@ -6,40 +6,75 @@
   <title>Isaac's Profile</title>
   <style>
     html, body {
-      margin: 0; padding: 0;
-      background-color: black;
-      min-height: 100vh;
-      font-family: Arial, sans-serif;
-      color: black;
+      margin: 0;
+      padding: 0;
+      background: black;
+      height: 100%;
+      overflow-x: hidden;
     }
 
-    /* Outer container with border & background */
-    .outer-wrapper {
+    /* Outer container with border + background */
+    .outer {
       background-color: #d9cab3;
       border: 20px solid #985321;
       box-shadow:
         inset 8px 8px 12px #803800,
         inset -8px -8px 12px #d8a36c,
         0 0 30px rgba(0,0,0,0.5);
-      margin: 20px auto;
+      margin: 0 auto;
       width: fit-content;
-      max-width: 100vw;
+      padding: 0;
       box-sizing: content-box;
     }
 
-    /* This container will have fixed 2560px width and scale down */
-    .scale-wrapper {
+    /* Main wrapper that will scale */
+    .scale-container {
       width: 2560px;
-      position: relative;
+      height: auto;
       transform-origin: top left;
+      position: relative;
     }
 
     .content {
+      width: 100%;
       position: relative;
-      min-height: 2000px; /* enough to fit all content vertically */
+      min-height: 2500px; /* enough height for all your content */
     }
 
-    /* Main image */
+    /* Text header */
+    .text-head {
+      position: absolute;
+      width: 700px;
+      background-color: #d9cab3;
+      border-radius: 8px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .text-head h1 {
+      font-size: 60px;
+      margin: 0;
+    }
+
+    .whoami { top: 80px; left: 1200px; }
+    .interests { top: 1630px; left: 230px; }
+    .future { top: 1630px; left: 1550px; }
+
+    .text-box {
+      position: absolute;
+      width: 700px;
+      padding: 20px;
+      background-color: #ffebc7;
+      border-radius: 8px;
+      color: #3e2349;
+      font-size: 20px;
+      z-index: 10;
+    }
+
+    .box1 { top: 220px; left: 1100px; }
+    .box2 { top: 500px; left: 1280px; }
+    .box3 { top: 800px; left: 1450px; }
+
     .main-image {
       position: absolute;
       top: 300px;
@@ -49,51 +84,6 @@
       border-radius: 15px;
     }
 
-    /* Headings */
-    .text-head {
-      position: absolute;
-      background-color: #d9cab3;
-      border-radius: 8px;
-      text-align: center;
-      width: 700px;
-      z-index: 1000;
-    }
-    .text-head.whoami {
-      top: 80px;
-      left: 1200px;
-    }
-    .text-head.interests {
-      top: 1630px;
-      left: 230px;
-      width: 700px;
-    }
-    .text-head.future {
-      top: 1630px;
-      left: 1550px;
-      width: 700px;
-    }
-    .text-head h1 {
-      font-size: 60px;
-      margin: 0;
-    }
-
-    /* Text boxes */
-    .text-box {
-      position: absolute;
-      width: 700px;
-      padding: 20px;
-      background-color: #ffebc7;
-      border-radius: 8px;
-      color: #3e2349;
-      font-size: 20px;
-      box-sizing: border-box;
-      z-index: 1000;
-    }
-    .box1 { top: 220px; left: 1100px; }
-    .box2 { top: 500px; left: 1280px; }
-    .box3 { top: 800px; left: 1450px; }
-
-    /* Slideshow */
     .slideshow-container {
       position: absolute;
       top: 1350px;
@@ -102,8 +92,9 @@
       height: 400px;
       overflow: hidden;
       border-radius: 10px;
-      z-index: 500;
+      z-index: 5;
     }
+
     .slide {
       position: absolute;
       width: 100%;
@@ -112,12 +103,12 @@
       opacity: 0;
       transition: opacity 2s ease-in-out;
     }
+
     .slide.active {
       opacity: 1;
       z-index: 1;
     }
 
-    /* Interests section */
     .interest-section {
       position: absolute;
       top: 1800px;
@@ -127,6 +118,7 @@
       padding: 0 100px;
       box-sizing: border-box;
     }
+
     .interest-box {
       width: 40%;
       min-height: 150px;
@@ -138,8 +130,9 @@
       overflow: auto;
     }
 
-    /* Image gallery */
     .image-gallery {
+      position: absolute;
+      top: 2200px;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -148,10 +141,9 @@
       padding: 50px 100px;
       background-color: #f8e7ce;
       border-radius: 20px;
-      margin-top: 80px;
-      position: relative;
-      top: 1850px;
+      width: 100%;
     }
+
     .image-box {
       width: 300px;
       height: 200px;
@@ -164,6 +156,7 @@
       justify-content: center;
       align-items: center;
     }
+
     .image-box img {
       width: 100%;
       height: 100%;
@@ -172,10 +165,10 @@
   </style>
 </head>
 <body>
-  <div class="outer-wrapper" id="outer-wrapper">
-    <div class="scale-wrapper" id="scale-wrapper">
+  <div class="outer">
+    <div class="scale-container" id="scale-container">
       <div class="content">
-        <img src="I_Slideshow1.jpg" alt="Main Slide" class="main-image" />
+        <img src="I_Slideshow1.jpg" class="main-image" alt="Main" />
 
         <div class="text-head whoami">
           <h1><strong>Who am I?</strong></h1>
@@ -211,7 +204,7 @@
 
         <div class="interest-section">
           <div class="interest-box" contenteditable="true">
-            I enjoy reading manga, watching shows, drawing and gaming. During my free time I also somethings practice my drawings. I guess you could say I'm quite an introvert and I really want to learn about programming. For what I read and watch I would say I enjoy romance and action.<br><br>(My photos are horrible) :(<br><br>Below are images from games, shows and manga that I enjoy.
+            I enjoy reading manga, watching shows, drawing and gaming. During my free time I also sometimes practice my drawings. I guess you could say I'm quite an introvert and I really want to learn about programming. For what I read and watch, I enjoy romance and action.<br><br>(My photos are horrible) :(<br><br>Below are images from games, shows and manga that I enjoy.
           </div>
           <div class="interest-box" contenteditable="true">
             I aspire to join MINDEF at year 3 to follow in my father's footsteps in the army. I also believe that it will be a good experience to learn proper coding through experience, and where else would be better than the military. This may not be the best option but that is a time for another day.
@@ -228,37 +221,34 @@
     </div>
   </div>
 
+  <!-- 🧠 JS: scale layout to fit any screen -->
   <script>
-    // Slide show code
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) slide.classList.add('active');
-      });
+    function scaleToFit() {
+      const container = document.getElementById('scale-container');
+      const screenWidth = window.innerWidth;
+      const scale = Math.min(screenWidth / 2560, 1); // never upscale
+      container.style.transform = `scale(${scale})`;
+
+      // Ensure outer container matches scaled height
+      const outer = document.querySelector('.outer');
+      const contentHeight = container.getBoundingClientRect().height;
+      outer.style.height = contentHeight + 'px';
     }
+
+    scaleToFit();
+    window.addEventListener('resize', scaleToFit);
+  </script>
+
+  <script>
+    // Slideshow logic
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
     function nextSlide() {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
     }
     setInterval(nextSlide, 3000);
-
-    // Scale the page down proportionally
-    function scalePage() {
-      const wrapper = document.getElementById('scale-wrapper');
-      const outer = document.getElementById('outer-wrapper');
-      const baseWidth = 2560;
-      const windowWidth = window.innerWidth;
-      let scale = windowWidth / baseWidth;
-      if (scale > 1) scale = 1; // don't upscale bigger than 100%
-
-      wrapper.style.transform = `scale(${scale})`;
-      // Adjust outer container height to scaled height to avoid overflow
-      outer.style.height = `${wrapper.getBoundingClientRect().height * scale}px`;
-    }
-    window.addEventListener('resize', scalePage);
-    window.addEventListener('load', scalePage);
   </script>
 </body>
 </html>
